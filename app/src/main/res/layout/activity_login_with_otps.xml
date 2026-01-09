@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:id="@+id/search"
+    android:background="@color/white">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+       android:layout_marginTop="@dimen/_35sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="@dimen/_5sdp">
+        <ImageView
+            android:id="@+id/marryMe"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:gravity="center"
+            android:src="@drawable/cicle_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_or_signup"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:layout_margin="@dimen/_5sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="@string/mobile_number"
+            android:padding="@dimen/_5sdp"
+            android:id="@+id/etMobileNumber"
+            android:fontFamily="sans-serif"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableStart="@drawable/baseline_call_24"
+            android:background="@drawable/edit_background">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/btnLogin"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_btn_rounded"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

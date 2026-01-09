@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" /> <!-- Supports Screens -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <queries>
+        <package android:name="com.phonepe.app" />
+        <package android:name="com.phonepe.app.preprod" />
+        <package android:name="com.google.android.apps.nbu.paisa.user" />		// GPay
+        <package android:name="net.one97.paytm" />								// Paytm
+        <package android:name="in.org.npci.upiapp" />							// BHIM
+        <package android:name="in.amazon.mShop.android.shopping" />			// AmazonPay
+    </queries>
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:supportsRtl">
+        <activity
+            android:name=".LoginWithOtp.LoginWithOtps"
+            android:exported="false" />
+        <activity android:name=".activity.ServiceDetails" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.samyotech.smmatrimony.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_Ub4A09SvIaUfee" />
+
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AppIntro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.loginsignup.Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.dashboard.Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.profile_other.ProfileOther"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.myprofile.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.editprofile.BasicDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.AboutFamilyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.AboutAppearance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.AboutMeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.ImportantDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.LifeStyleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.imageselection.ImageshowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.imageselection.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".multipleimagepicker.MultiImageSelectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dashboard.RateUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePass"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.editprofile.CriticalFields"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.profile_other.ImageSlider"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.myprofile.DeleteImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LanguageSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.myprofile.BioData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.loginsignup.ForgotPass"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.MainFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.search.Search"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.search.SearchResult"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.search.SearchResultMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.search.FullProfileSearch"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.subscription.MemberShipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OneTwoOneChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subscription.SubscriptionHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.loginsignup.RegistrationNew"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="3db7741514824365d36d79a39c9867a3bd2a28bd" /> <!-- [START firebase_service] -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_service] -->
+        <receiver
+            android:name=".FirebaseBackgroundService"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.videocall.ConnectActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.videocall.SettingsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.videocall.CallActivity"
+            android:screenOrientation="portrait"></activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!-- Keep it true in UAT environment for both the flags-->
+        <meta-data
+            android:name="com.phonepe.android.sdk.isUAT"
+            android:value="true"/>
+        <meta-data
+            android:name="com.phonepe.android.sdk.isSimulator"
+            android:value="true"/>
+
+        <!-- The value will be the MID-->
+        <meta-data
+            android:name="com.phonepe.android.sdk.MerchantId"
+            android:value="PGTESTPAYUAT103"/>
+
+        <!-- For UAT, App Id is not required.
+        Make sure to add the following and you get the APP Id for Production after UAT Sign-off -->
+<!--        <meta-data-->
+<!--            android:name="com.phonepe.android.sdk.AppId"-->
+<!--            android:value="<your app id given by PhonePe>"/>-->
+    </application>
+
+</manifest>

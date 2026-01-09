@@ -1,0 +1,52 @@
+package com.bytes.mangalho.activity.profile_other;
+
+import android.content.Context;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.WindowManager;
+
+import com.bytes.mangalho.Models.ImageDTO;
+import com.bytes.mangalho.R;
+import com.bytes.mangalho.adapter.AdapterImageSlider;
+import com.bytes.mangalho.interfaces.Consts;
+
+import java.util.ArrayList;
+
+public class ImageSlider extends AppCompatActivity {
+    private ViewPager viewpager;
+    private ArrayList<ImageDTO> imageDatalist;
+    private AdapterImageSlider mAdapter;
+    private Context mcontext;
+    
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_image_slider);
+        mcontext = ImageSlider.this;
+        viewpager = (ViewPager) findViewById(R.id.viewpager);
+
+        if (getIntent().hasExtra(Consts.IMAGE_LIST)) {
+            Bundle args = getIntent().getBundleExtra(Consts.IMAGE_LIST);
+            imageDatalist = new ArrayList<>();
+            imageDatalist = (ArrayList<ImageDTO>) args.getSerializable("ARRAYLIST");
+            
+        }
+
+        mAdapter = new AdapterImageSlider(ImageSlider.this, mcontext, imageDatalist);
+        viewpager.setAdapter(mAdapter);
+        //viewpager.setPageTransformer(true, new ZoomOutSlideTransformer());
+        
+        //viewpager.setOnPageChangeListener(this);
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        finish();
+    }
+}

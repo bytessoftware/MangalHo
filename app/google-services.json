@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "554567048930",
+    "project_id": "mangalho-12ba0",
+    "storage_bucket": "mangalho-12ba0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554567048930:android:408efb9d8997a33fd888bb",
+        "android_client_info": {
+          "package_name": "com.bytes.mangalho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554567048930-2ovsbtldpac0tmeohbtf6u63l58k5aoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDRLyCilYUUyb3d57IDvJnaeNMppmW8FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554567048930-2ovsbtldpac0tmeohbtf6u63l58k5aoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

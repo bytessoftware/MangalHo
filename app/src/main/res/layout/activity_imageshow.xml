@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bytes.mangalho.view.ProfilePageProfilePhotoImageView
+        android:id="@+id/IVfirst"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_add_more" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/IVfirst">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/IVsetimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/IVfirst"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_add_more"
+        android:visibility="gone" />
+
+
+    <com.bytes.mangalho.view.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="@string/we_are_uploading_only_5_images"
+        android:textColor="@color/red_800"
+        android:textSize="18sp" />
+
+</RelativeLayout>

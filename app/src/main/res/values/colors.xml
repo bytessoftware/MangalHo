@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#db0033</color>
+    <color name="colorPrimaryDark">#db0033</color>
+    <color name="colorAccent">#db0033</color>
+    <color name="red_300">#e57373</color>
+    <color name="red_400">#ef5350</color>
+    <color name="red_500">#f44336</color>
+    <color name="red_800">#c62828</color>
+    <color name="red_900">#b71c1c</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#969696</color>
+    <color name="lightGray">#E6E6E6</color>
+    <color name="color_button_disabled">#c5c3c4</color>
+    <color name="text_bio">#990000</color>
+    <color name="off_white">#F1ECE4</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="inset">#9000</color>
+    <color name="overlay">#AA1C1C1C</color>
+
+
+    <color name="textcolor">#515159</color>
+    <color name="textcolor2">#525159</color>
+    <color name="text_color_light">#69707F</color>
+    <color name="textColorLight">#B3B4B9</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="btn_color">#db0033</color>
+    <color name="view_color">#72727C</color>
+    <color name="etBack">#ECECEC</color>
+    <color name="icon_color">#db0033</color>
+    <color name="intro_btn">#A0db0033</color>
+    <color name="chat_out">#c4ccf8</color>
+    <color name="chat_in">#e0e3e6</color>
+</resources>
